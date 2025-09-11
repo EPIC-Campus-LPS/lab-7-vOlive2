@@ -16,7 +16,6 @@ public class PasswordMaker {
 			System.out.print(", " + pass + "\n");
 		}
 		scan.close();
-		
 	}
 	public static String password() {
 		String chars = "abcdefghijclmnopqrstuvwxyz0123456789!@#$%^&*~_-=+[]{}().,?/`";
