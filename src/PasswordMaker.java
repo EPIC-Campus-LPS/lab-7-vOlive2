@@ -11,9 +11,9 @@ public class PasswordMaker {
 			String line = scan.nextLine();
 			Scanner lineScanner = new Scanner(line);
 			String email = lineScanner.next();
-
-			System.out.print(System.out.printf(email.substring(0, email.indexOf("@"))));
-			System.out.print(password());
+			String pass = password();
+			System.out.print(email.substring(0, email.indexOf("@")));
+			System.out.print(", " + pass + "\n");
 		}
 		scan.close();
 		
@@ -24,8 +24,8 @@ public class PasswordMaker {
 		for(int i = 0; i <= 10; i++) {
 			int which = (int) (Math.random() * 60);
 			int up = (int) (Math.random() * 2);
-			if(up == 1) {pass+=chars.substring(which-1, which);
-			} else {pass+=chars.substring(which-1, which).toUpperCase();}
+			if(up == 1) {pass+=chars.substring(which, which+1);
+			} else {pass+=chars.substring(which, which+1).toUpperCase();}
 		}
 		return pass;
 	}
