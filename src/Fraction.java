@@ -27,11 +27,11 @@ public class Fraction {
 		return denominator;
 	}
 	public double toDecimal() {
-		return numerator/denominator;
+		return (double) numerator / (double) denominator;
 	}
 	public Fraction simplify() {
 		int g = 1;
-		for(int i = 0; i < denominator; i++) {
+		for(int i = 1; i < denominator; i++) {
 			if(denominator % i == 0 && numerator % i == 0) {g = i;}
 		}
 		Fraction simpled = new Fraction (numerator/g, denominator/g);
@@ -42,7 +42,7 @@ public class Fraction {
 		return "" + numerator + "/" + denominator;
 	}
 	public boolean equals(Fraction f) {
-		return (f.getNum() == getNum() && f.getDen() == getDen());
+		return (f.toDecimal() == toDecimal());
 	}
 	
 	
