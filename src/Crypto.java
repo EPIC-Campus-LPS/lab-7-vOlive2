@@ -1,13 +1,14 @@
-public class Crypto {
-	public static void main(String args[]) {
-		
+public class Crypto {	
+	public static String encrypt(String mes, int num) {
+		String letters = "abcdefghijkllmnopqrstuvwxyz";
+		String newMes = "";
+		for(int i = 0; i < mes.length(); i++) {
+			
+		}
+		return newMes;
 	}
 	
-	public String encrypt(String mes, int num) {
-		
-	}
-	
-	public String decrypt(String mes, int num) {
+	public static String decrypt(String mes, int num) {
 		
 	}
 }
